@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu - Es Teh Ibukota</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .tab-btn { transition: all 0.25s ease; border: 1.5px solid #d1d5db; color: #4b5563; }
+    .tab-btn.active {
+      background: linear-gradient(135deg, #1e8449, #27ae60);
+      color: #fff;
+      border-color: transparent;
+      box-shadow: 0 4px 16px rgba(39,174,96,0.35);
+    }
+    .menu-card { width: 160px; flex-shrink: 0; }
+    @media (max-width: 480px) { .menu-card { width: calc(50% - 8px); } }
+    .section-divider {
+      border: none;
+      border-top: 1px solid rgba(46,204,113,0.15);
+      margin: 0 0 3rem 0;
+    }
+  </style>
+</head>
+<body style="background:#0d2b1a">
+
+  <div id="navbar-placeholder"></div>
+
+  <!-- Page Header -->
+  <div class="page-header py-12 px-4">
+    <div class="max-w-6xl mx-auto text-center">
+      <div class="inline-flex items-center gap-2 bg-green-900/60 border border-green-700/50 text-green-300 text-xs font-semibold px-4 py-1.5 rounded-full mb-4">
+        <i class="fas fa-mug-hot text-green-400"></i> Menu Minuman
+      </div>
+      <h1 class="text-3xl font-extrabold text-white mb-2">Pilihan Menu Kami</h1>
+      <p class="text-green-400/70 text-sm">Dibuat segar setiap hari dari bahan-bahan pilihan terbaik</p>
+    </div>
+  </div>
+
+  <!-- Tab Navigation -->
+  <div class="bg-white shadow-sm sticky top-[61px] z-40"></div>
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center gap-2 flex-wrap justify-center">
+      <button onclick="showTab('all')" id="tab-all" class="tab-btn active text-xs font-bold px-4 py-2 rounded-xl">
+         Semua Menu
+      </button>
+      <button onclick="showTab('tea')" id="tab-tea" class="tab-btn text-xs font-bold px-4 py-2 rounded-xl">
+        🍃 Tea Series
+      </button>
+      <button onclick="showTab('milktea')" id="tab-milktea" class="tab-btn text-xs font-bold px-4 py-2 rounded-xl">
+        🧋  Milk Tea Series
+      </button>
+      <button onclick="showTab('milky')" id="tab-milky" class="tab-btn text-xs font-bold px-4 py-2 rounded-xl">
+        🥛 Milky Series
+      </button>
+    </div>
+  </div>
+
+  <!-- Loading -->
+  <div id="loading" class="max-w-6xl mx-auto px-4 py-10 hidden">
+    <div class="flex flex-wrap justify-center gap-4">
+      <div class="bg-white rounded-2xl overflow-hidden" style="width:160px"><div class="skeleton h-40 w-full"></div><div class="p-3 space-y-2"><div class="skeleton h-4 w-full rounded"></div><div class="skeleton h-3 w-3/4 rounded"></div></div></div>
+      <div class="bg-white rounded-2xl overflow-hidden" style="width:160px"><div class="skeleton h-40 w-full"></div><div class="p-3 space-y-2"><div class="skeleton h-4 w-full rounded"></div><div class="skeleton h-3 w-3/4 rounded"></div></div></div>
+      <div class="bg-white rounded-2xl overflow-hidden" style="width:160px"><div class="skeleton h-40 w-full"></div><div class="p-3 space-y-2"><div class="skeleton h-4 w-full rounded"></div><div class="skeleton h-3 w-3/4 rounded"></div></div></div>
+      <div class="bg-white rounded-2xl overflow-hidden" style="width:160px"><div class="skeleton h-40 w-full"></div><div class="p-3 space-y-2"><div class="skeleton h-4 w-full rounded"></div><div class="skeleton h-3 w-3/4 rounded"></div></div></div>
+    </div>
+  </div>
+
+  <!-- Error -->
+  <div id="error-msg" class="max-w-6xl mx-auto px-4 pt-4 hidden">
+    <div class="bg-amber-50 border border-amber-200 text-amber-700 px-4 py-3 rounded-xl flex items-center gap-2 text-sm">
+      <i class="fas fa-triangle-exclamation"></i> Menampilkan data contoh.
+    </div>
+  </div>
+
+  <!-- Content -->
+  <main class="max-w-6xl mx-auto px-4 pt-8 pb-20">
+
+    <!-- ── TEA SERIES ── -->
+    <div id="sec-tea" class="mb-12">
+      <div class="flex items-center gap-3 mb-6">
+        <div class="w-10 h-10 rounded-2xl flex items-center justify-center text-xl" style="background:rgba(46,204,113,0.15)">🍃</div>
+        <div>
+          <h2 class="text-xl font-extrabold text-white">Tea Series</h2>
+          <p class="text-green-400/60 text-xs mt-0.5">Teh segar pilihan, murni dan menyegarkan</p>
+        </div>
+        <span id="count-tea" class="ml-auto text-xs text-green-400/70 font-medium bg-green-900/50 border border-green-800/50 px-3 py-1 rounded-full">6 menu</span>
+      </div>
+      <div id="grid-tea" class="flex flex-wrap justify-center gap-4"></div>
+    </div>
+
+    <hr class="section-divider" id="div-milktea" />
+
+    <!-- ── MILK TEA SERIES ── -->
+    <div id="sec-milktea" class="mb-12">
+      <div class="flex items-center gap-3 mb-6">
+        <div class="w-10 h-10 rounded-2xl flex items-center justify-center text-xl" style="background:rgba(46,204,113,0.15)">🧋</div>
+        <div>
+          <h2 class="text-xl font-extrabold text-white">Milk Tea Series</h2>
+          <p class="text-green-400/60 text-xs mt-0.5">Perpaduan teh dan susu yang creamy dan lezat</p>
+        </div>
+        <span id="count-milktea" class="ml-auto text-xs text-green-400/70 font-medium bg-green-900/50 border border-green-800/50 px-3 py-1 rounded-full">11 menu</span>
+      </div>
+      <div id="grid-milktea" class="flex flex-wrap justify-center gap-4"></div>
+    </div>
+
+    <hr class="section-divider" id="div-milky" />
+
+    <!-- ── MILKY SERIES ── -->
+    <div id="sec-milky" class="mb-6">
+      <div class="flex items-center gap-3 mb-6">
+        <div class="w-10 h-10 rounded-2xl flex items-center justify-center text-xl" style="background:rgba(46,204,113,0.15)">🥛</div>
+        <div>
+          <h2 class="text-xl font-extrabold text-white">Milky Series</h2>
+          <p class="text-green-400/60 text-xs mt-0.5">Susu segar murni dengan berbagai varian rasa</p>
+        </div>
+        <span id="count-milky" class="ml-auto text-xs text-green-400/70 font-medium bg-green-900/50 border border-green-800/50 px-3 py-1 rounded-full">4 menu</span>
+      </div>
+      <div id="grid-milky" class="flex flex-wrap justify-center gap-4"></div>
+    </div>
+
+  </main>
+
+  <!-- Toast -->
+  <div id="toast" class="toast-box toast-enter fixed bottom-6 right-6 text-white px-5 py-3.5 rounded-2xl hidden z-50 flex items-center gap-3 min-w-[270px]">
+    <div class="w-8 h-8 bg-white/15 rounded-xl flex items-center justify-center flex-shrink-0">
+      <i class="fas fa-check text-green-300 text-sm"></i>
+    </div>
+    <span id="toast-msg" class="text-sm font-semibold">Berhasil</span>
+  </div>
+
+  <script src="js/nav.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    renderNavbar('menu');
+
+    // Map category name → section key
+    const CAT_MAP = {
+      'Tea Series':      'tea',
+      'Milk Tea Series': 'milktea',
+      'Milky Series':    'milky',
+    };
+    const SECTIONS = ['tea', 'milktea', 'milky'];
+
+    function renderCard(grid, product) {
+      const card = document.createElement('div');
+      card.className = 'product-card menu-card flex flex-col';
+      card.innerHTML = `
+        <div class="img-wrap">
+          <img src="${product.image}" alt="${product.name}"
+            class="w-full h-40 object-cover" loading="lazy"
+            onerror="this.src='https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400&q=80'" />
+        </div>
+        <div class="p-3 flex flex-col flex-1">
+          <h3 class="font-bold text-gray-800 text-sm mb-1 clamp-2">${product.name}</h3>
+          <p class="text-gray-400 text-xs mb-3 flex-1 clamp-2">${product.description}</p>
+          <div class="flex items-center justify-between mt-auto">
+            <span class="text-green-700 font-extrabold text-sm">${formatRupiah(product.price)}</span>
+            <button onclick='addToCart(${JSON.stringify(product)})'
+              style="background:linear-gradient(135deg,#1e8449,#27ae60);box-shadow:0 3px 10px rgba(39,174,96,0.3)"
+              class="text-white text-xs px-2.5 py-1.5 rounded-xl font-semibold flex items-center gap-1 hover:opacity-90 transition-all active:scale-95">
+              <i class="fas fa-cart-plus text-xs"></i> Tambah
+            </button>
+          </div>
+        </div>`;
+      grid.appendChild(card);
+    }
+
+    function buildSections(products) {
+      SECTIONS.forEach(key => {
+        const catName = Object.keys(CAT_MAP).find(c => CAT_MAP[c] === key);
+        const items = products.filter(p => p.category === catName);
+        const grid = document.getElementById(`grid-${key}`);
+        const count = document.getElementById(`count-${key}`);
+        if (!grid) return;
+        grid.innerHTML = '';
+        items.forEach(p => renderCard(grid, p));
+        if (count) count.textContent = `${items.length} menu`;
+      });
+    }
+
+    function showTab(tab) {
+      // Update tombol aktif
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById(`tab-${tab}`)?.classList.add('active');
+
+      if (tab === 'all') {
+        // Tampilkan semua section + divider
+        SECTIONS.forEach(key => {
+          document.getElementById(`sec-${key}`).style.display = '';
+        });
+        document.getElementById('div-milktea').style.display = '';
+        document.getElementById('div-milky').style.display = '';
+      } else {
+        // Sembunyikan semua, tampilkan hanya yang dipilih
+        SECTIONS.forEach(key => {
+          document.getElementById(`sec-${key}`).style.display = key === tab ? '' : 'none';
+        });
+        document.getElementById('div-milktea').style.display = 'none';
+        document.getElementById('div-milky').style.display = 'none';
+      }
+    }
+
+    // Setelah produk dimuat, isi grid lalu tampilkan semua
+    window.addEventListener('productsLoaded', () => {
+      buildSections(allProducts);
+      showTab('all');
+    });
+  </script>
+</body>
+</html>

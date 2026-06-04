@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beranda - Es Teh Ibukota</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div id="navbar-placeholder"></div>
+
+  <!-- Hero -->
+  <section class="hero-bg hero-grid">
+    <div class="relative max-w-6xl mx-auto px-4 py-28 flex flex-col md:flex-row items-center gap-14">
+      <div class="flex-1 text-center md:text-left">
+        <div class="inline-flex items-center gap-2 bg-green-900/60 border border-green-700/50 text-green-300 text-xs font-semibold px-4 py-1.5 rounded-full mb-6">
+          <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+          Buka Setiap Hari · 08.00 – 21.00 WIB
+        </div>
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-5">
+          <span class="text-green-900">Segar, Nikmat,</span><br/>
+          <span class="text-green-900">Harga Bersahabat</span>
+        </h1>
+        <p class="text-green-900/80 text-base md:text-lg mb-10 max-w-lg leading-relaxed">
+          Es Teh Ibukota hadir untuk menemani harimu dengan minuman segar berkualitas. Dibuat dari bahan pilihan, disajikan dengan cinta.
+        </p>
+        <div class="flex flex-wrap gap-3 justify-center md:justify-start">
+          <a href="menu.html" class="btn-primary text-white font-bold px-8 py-3.5 rounded-xl flex items-center gap-2 text-sm">
+            <i class="fas fa-mug-hot"></i> Lihat Menu
+          </a>
+          <a href="kontak.html" class="btn-outline font-bold px-8 py-3.5 rounded-xl flex items-center gap-2 text-sm">
+            <i class="fab fa-whatsapp"></i> Hubungi Kami
+          </a>
+        </div>
+      </div>
+      <!-- Visual -->
+      <div class="flex-shrink-0">
+        <div class="relative w-64 h-64 md:w-80 md:h-80">
+          <div class="absolute inset-0 bg-green-400/10 rounded-full blur-3xl"></div>
+          <div class="relative w-full h-full rounded-3xl border border-green-700/30 bg-green-900/20 backdrop-blur-sm flex items-center justify-center">
+            <div class="text-center">
+              <div class="text-8xl mb-3">🧋</div>
+              <p class="text-green-300 font-bold text-lg">Es Teh Ibukota</p>
+              <p class="text-green-500 text-sm mt-1">Minuman Segar Pilihan</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Keunggulan -->
+  <section class="bg-white py-16 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="section-title mx-auto" style="display:inline-block">Kenapa Pilih Kami?</h2>
+        <p class="text-gray-500 text-sm mt-5 max-w-md mx-auto">Kami berkomitmen menghadirkan pengalaman minum teh yang tak terlupakan</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="info-card p-6 text-center fade-up fade-up-delay-1">
+          <div class="w-14 h-14 mx-auto mb-4 rounded-2xl flex items-center justify-center text-2xl" style="background:linear-gradient(135deg,#e8f8ef,#d4f1e0)">🍃</div>
+          <h3 class="font-bold text-gray-800 mb-2">Bahan Segar</h3>
+          <p class="text-gray-500 text-xs leading-relaxed">Teh pilihan dari perkebunan terbaik, diseduh segar setiap hari.</p>
+        </div>
+        <div class="info-card p-6 text-center fade-up fade-up-delay-2">
+          <div class="w-14 h-14 mx-auto mb-4 rounded-2xl flex items-center justify-center text-2xl" style="background:linear-gradient(135deg,#e8f8ef,#d4f1e0)">💰</div>
+          <h3 class="font-bold text-gray-800 mb-2">Harga Terjangkau</h3>
+          <p class="text-gray-500 text-xs leading-relaxed">Mulai dari Rp 5.000, semua orang bisa menikmati kesegaran kami.</p>
+        </div>
+        <div class="info-card p-6 text-center fade-up fade-up-delay-2">
+          <div class="w-14 h-14 mx-auto mb-4 rounded-2xl flex items-center justify-center text-2xl" style="background:linear-gradient(135deg,#e8f8ef,#d4f1e0)">⚡</div>
+          <h3 class="font-bold text-gray-800 mb-2">Proses Cepat</h3>
+          <p class="text-gray-500 text-xs leading-relaxed">Pesanan siap dalam hitungan menit, tidak perlu menunggu lama.</p>
+        </div>
+        <div class="info-card p-6 text-center fade-up fade-up-delay-3">
+          <div class="w-14 h-14 mx-auto mb-4 rounded-2xl flex items-center justify-center text-2xl" style="background:linear-gradient(135deg,#e8f8ef,#d4f1e0)">🚚</div>
+          <h3 class="font-bold text-gray-800 mb-2">Antar ke Tempat</h3>
+          <p class="text-gray-500 text-xs leading-relaxed">Layanan pesan antar tersedia untuk area sekitar toko kami.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tentang Singkat -->
+  <section class="max-w-6xl mx-auto px-4 py-16">
+    <div class="dark-card p-8 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      <div>
+        <p class="text-green-400 text-xs font-bold uppercase tracking-widest mb-3">Tentang Kami</p>
+        <h2 class="text-2xl md:text-3xl font-extrabold text-white mb-4 leading-snug">
+          Lahir dari Cinta<br/>untuk Minuman Segar
+        </h2>
+        <p class="text-green-300/70 text-sm leading-relaxed mb-4">
+          Es Teh Ibukota berdiri sejak 2020 dengan satu misi sederhana: menghadirkan minuman teh segar berkualitas tinggi yang bisa dinikmati semua kalangan.
+        </p>
+        <p class="text-green-300/70 text-sm leading-relaxed mb-6">
+          Dari satu gerobak kecil di pinggir jalan, kini kami telah melayani ribuan pelanggan setia di Jakarta dan sekitarnya.
+        </p>
+        <a href="tentang.html" class="btn-primary inline-flex items-center gap-2 text-white font-semibold px-6 py-2.5 rounded-xl text-sm">
+          Selengkapnya <i class="fas fa-arrow-right text-xs"></i>
+        </a>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="bg-green-900/40 border border-green-700/30 rounded-2xl p-5 text-center">
+          <p class="text-3xl font-extrabold text-green-400">50+</p>
+          <p class="text-green-300/60 text-xs mt-1">Varian Menu</p>
+        </div>
+        <div class="bg-green-900/40 border border-green-700/30 rounded-2xl p-5 text-center">
+          <p class="text-3xl font-extrabold text-green-400">10K+</p>
+          <p class="text-green-300/60 text-xs mt-1">Pelanggan Puas</p>
+        </div>
+        <div class="bg-green-900/40 border border-green-700/30 rounded-2xl p-5 text-center">
+          <p class="text-3xl font-extrabold text-green-400">4.9★</p>
+          <p class="text-green-300/60 text-xs mt-1">Rating Rata-rata</p>
+        </div>
+        <div class="bg-green-900/40 border border-green-700/30 rounded-2xl p-5 text-center">
+          <p class="text-3xl font-extrabold text-green-400">5 Thn</p>
+          <p class="text-green-300/60 text-xs mt-1">Berpengalaman</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimoni -->
+  <section class="bg-white py-16 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="section-title mx-auto" style="display:inline-block">Kata Pelanggan Kami</h2>
+        <p class="text-gray-500 text-sm mt-5">Ribuan pelanggan sudah merasakan kesegarannya</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="info-card p-6">
+          <div class="flex items-center gap-1 mb-3">
+            <i class="fas fa-star text-yellow-400 text-xs"></i>
+            <i class="fas fa-star text-yellow-400 text-xs"></i>
+            <i class="fas fa-star text-yellow-400 text-xs"></i>
+            <i class="fas fa-star text-yellow-400 text-xs"></i>
+            <i class="fas fa-star text-yellow-400 text-xs"></i>
+          </div>
+          <p class="text-gray-600 text-sm leading-relaxed mb-4">"Es tehnya enak banget, manis pas dan tehnya kerasa banget. Harganya juga murah meriah, jadi langganan deh!"</p>
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full flex items-center justify-center text-white font-bold text-sm" style="background:linear-gradient(135deg,#1e8449,#27ae60)">A</div>
+            <div>
+              <p class="font-bold text-gray-800 text-sm">Andi S.</p>
+              <p class="text-gray-400 text-xs">Jakarta Selatan</p>
+            </div>
+          </div>
+        </div>
+        <div class="info-card p-6">
+          <div class="flex items-center gap-1 mb-3">
+            <i class="fas fa-star text-yellow-400 text-xs"></i>
+            <i class="fas fa-star text-yellow-400 text-xs"></i>
+            <i class="fas fa-star text-yellow-400 text-xs"></i>
+            <i class="fas fa-star text-yellow-400 text-xs"></i>
+            <i class="fas fa-star text-yellow-400 text-xs"></i>
+          </div>
+          <p class="text-gray-600 text-sm leading-relaxed mb-4">"Pelayanannya ramah, pesanan cepat. Es teh susunya jadi favorit keluarga kami setiap weekend!"</p>
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full flex items-center justify-center text-white font-bold text-sm" style="background:linear-gradient(135deg,#1e8449,#27ae60)">R</div>
+            <div>
+              <p class="font-bold text-gray-800 text-sm">Rina W.</p>
+              <p class="text-gray-400 text-xs">Jakarta Pusat</p>
+            </div>
+          </div>
+        </div>
+        <div class="info-card p-6">
+          <div class="flex items-center gap-1 mb-3">
+            <i class="fas fa-star text-yellow-400 text-xs"></i>
+            <i class="fas fa-star text-yellow-400 text-xs"></i>
+            <i class="fas fa-star text-yellow-400 text-xs"></i>
+            <i class="fas fa-star text-yellow-400 text-xs"></i>
+            <i class="fas fa-star-half-alt text-yellow-400 text-xs"></i>
+          </div>
+          <p class="text-gray-600 text-sm leading-relaxed mb-4">"Cocok banget buat nemenin kerja. Varian tehnya banyak, saya suka yang teh lemon, segar abis!"</p>
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full flex items-center justify-center text-white font-bold text-sm" style="background:linear-gradient(135deg,#1e8449,#27ae60)">D</div>
+            <div>
+              <p class="font-bold text-gray-800 text-sm">Dika P.</p>
+              <p class="text-gray-400 text-xs">Depok</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="max-w-6xl mx-auto px-4 py-16">
+    <div class="hero-bg hero-grid rounded-3xl p-10 md:p-14 text-center relative overflow-hidden">
+      <div class="relative">
+        <p class="text-green-400 text-sm font-bold mb-3"> Siap Memesan?</p>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">Yuk, Pesan Sekarang!</h2>
+        <p class="text-green-300/70 text-sm mb-8 max-w-md mx-auto">Cek menu lengkap kami dan temukan minuman favoritmu. Tersedia berbagai pilihan teh segar yang siap menemani harimu.</p>
+        <div class="flex flex-wrap gap-3 justify-center">
+          <a href="menu.html" class="bg-white text-green-700 font-bold px-8 py-3 rounded-xl hover:bg-green-50 transition shadow-lg flex items-center gap-2 text-sm">  
+            <i class="fas fa-mug-hot"></i> Lihat Menu Lengkap
+          </a>
+          <a href="https://wa.me/6281234567890?text=Halo%20Es%20Teh%20Ibukota,%20saya%20mau%20pesan" target="_blank"
+            class="bg-green-500 hover:bg-green-400 text-white font-bold px-8 py-3 rounded-xl transition shadow-lg flex items-center gap-2 text-sm">
+            <i class="fab fa-whatsapp"></i> Order via WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-bg text-gray-400 pt-16 pb-6 px-4">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+      <div class="md:col-span-2">
+        <div class="flex items-center gap-2.5 mb-4">
+          <div class="w-10 h-10 btn-primary rounded-xl flex items-center justify-center">
+            <i class="fas fa-leaf text-white"></i>
+          </div>
+          <span class="text-white text-xl font-extrabold">Es Teh Ibukota</span>
+        </div>
+        <p class="text-sm leading-relaxed text-gray-500 max-w-xs">Minuman teh segar berkualitas dengan harga bersahabat. Hadir untuk menemani setiap momen harimu.</p>
+        <div class="flex gap-2.5 mt-5">
+          <a href="https://instagram.com/estehIbukota" target="_blank" class="footer-icon w-9 h-9 rounded-xl flex items-center justify-center transition-all hover:scale-110"><i class="fab fa-instagram text-green-400 text-sm"></i></a>
+          <a href="https://wa.me/6281234567890" target="_blank" class="footer-icon w-9 h-9 rounded-xl flex items-center justify-center transition-all hover:scale-110"><i class="fab fa-whatsapp text-green-400 text-sm"></i></a>
+          <a href="#" class="footer-icon w-9 h-9 rounded-xl flex items-center justify-center transition-all hover:scale-110"><i class="fab fa-tiktok text-green-400 text-sm"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4 class="text-white font-bold mb-4 text-sm uppercase tracking-wider">Navigasi</h4>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="index.html" class="text-gray-500 hover:text-green-400 transition-colors">Beranda</a></li>
+          <li><a href="menu.html" class="text-gray-500 hover:text-green-400 transition-colors">Menu</a></li>
+          <li><a href="tentang.html" class="text-gray-500 hover:text-green-400 transition-colors">Tentang Kami</a></li>
+          <li><a href="kontak.html" class="text-gray-500 hover:text-green-400 transition-colors">Kontak</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-bold mb-4 text-sm uppercase tracking-wider">Kontak</h4>
+        <ul class="space-y-3 text-sm">
+          <li class="flex items-start gap-2.5">
+            <i class="fas fa-map-marker-alt text-green-500 mt-0.5 w-4 flex-shrink-0"></i>
+            <span class="text-gray-500">Jl. Merdeka No. 123, Jakarta Pusat</span>
+          </li>
+          <li class="flex items-center gap-2.5">
+            <i class="fas fa-phone text-green-500 w-4 flex-shrink-0"></i>
+            <span class="text-gray-500">+62 812-3456-7890</span>
+          </li>
+          <li class="flex items-center gap-2.5">
+            <i class="fas fa-clock text-green-500 w-4 flex-shrink-0"></i>
+            <span class="text-gray-500">08.00 – 21.00 WIB</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-green-950 pt-6 text-center text-xs text-gray-600">
+      &copy; 2026 Es Teh Ibukota &mdash; Dibuat dengan <i class="fas fa-heart text-green-600 mx-1"></i> untuk pelanggan setia kami.
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script>renderNavbar('beranda');</script>
+</body>
+</html>
